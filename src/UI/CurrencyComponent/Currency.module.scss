@@ -1,0 +1,83 @@
+.currency {
+    background-color: #efeded;
+    color: black;
+    padding: 0;
+    width: 200px;
+  }
+  .title {
+    background-color: #d84b4b;
+    color: #fff;
+    padding: 0.5rem;
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+  .row {
+    display: flex;
+    background-color: #fff;
+    margin: 1rem;
+    justify-content: space-around;
+    border-bottom: 3px solid #d84b4b;
+    padding: 0.5rem;
+    overflow-x: hidden;
+  }
+  
+  .row_p {
+    width: 3rem;
+    text-align: center;
+  }
+  p {
+    margin: 0;
+  }
+  .input {
+    background-color: #fff;
+    color: black;
+    border: none;
+    width: 4rem;
+    text-align: center;
+  }
+  .input:focus-visible {
+    outline: 1px solid #fff;
+  }
+  .error {
+    color: red;
+    text-align: center;
+  }
+  
+  .loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid;
+    border-color: #FF3D00 transparent;
+    border-radius: 50%;
+    display: block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  @media (max-width: 576px) {
+    .currency {
+      width: 250px;
+    }
+    .input {
+      width: 2.5rem;
+      text-align: center;
+    }
+    .row_p {
+      width: 2rem;
+    }
+    .row {
+      margin: 0.5rem;
+      padding: 0.2rem;
+    }
+  }
+  

@@ -36,6 +36,6 @@ export const GeneralLayout = () => {
         <NewsList />
         <NewsListSearch />
       </NewsContext.Provider>
-    </div>
+    </div >
   );
 };
