@@ -8,6 +8,7 @@ import { TopNews } from "../NewsComponent/TopNews";
 import { NewsListSearch } from "../NewsComponent/NewsListSearch";
 import { useSearchParams } from "react-router-dom";
 import { Currency } from "../CurrencyComponent/CurrencyComponent";
+import WeatherPage from "../WeatherComponent/WeatherComponent";
 
 export const GeneralLayout = () => {
   const [category, setCategory] = useState("business");
@@ -64,9 +65,9 @@ export const GeneralLayout = () => {
         <NewsListSearch />
       </NewsContext.Provider>
       <div className="row">
+        <WeatherPage />
         <Currency />
       </div>
-
     </div>
   );
 };
