@@ -1,0 +1,1 @@
+export const URL_CURRENCY = 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json'

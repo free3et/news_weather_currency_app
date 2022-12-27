@@ -7,6 +7,7 @@ import { SearchNews } from "../SearchNews";
 import { TopNews } from "../NewsComponent/TopNews";
 import { NewsListSearch } from "../NewsComponent/NewsListSearch";
 import { useSearchParams } from "react-router-dom";
+import { Currency } from "../CurrencyComponent/CurrencyComponent";
 
 export const GeneralLayout = () => {
   const [category, setCategory] = useState("business");
@@ -53,7 +54,7 @@ export const GeneralLayout = () => {
   useEffect(() => getQueryParams(country, category, search), [country, category, search]);
 
   return (
-    <div className="App">
+    <div className="container">
       <NewsContext.Provider value={{ category, country, search }}>
         <SearchNews getSearchNews={getSearchNews} />
         <SelectCountry getCountry={getCountry} />
@@ -62,6 +63,10 @@ export const GeneralLayout = () => {
         <NewsList />
         <NewsListSearch />
       </NewsContext.Provider>
+      <div className="row">
+        <Currency />
+      </div>
+
     </div>
   );
 };
