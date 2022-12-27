@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { GeneralLayout } from "../UI/GeneralLayout";
+import { GeneralLayout } from "../UI/GeneralLayout/GeneralLayout";
 import { Layout } from "./Layout";
 import { NewsListSearch } from "../UI/NewsComponent/NewsListSearch";
 import { ErrorComponent } from "../Error/ErrorComponent";
