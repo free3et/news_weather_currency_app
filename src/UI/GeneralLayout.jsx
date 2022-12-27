@@ -6,6 +6,7 @@ import { SelectCountry } from "./NewsComponent/SelectCountry";
 import { SearchNews } from "./SearchNews";
 import { TopNews } from "./NewsComponent/TopNews";
 import { NewsListSearch } from "./NewsComponent/NewsListSearch";
+import WeatherPage from "./WeatherComponent/WeatherComponent";
 
 export const GeneralLayout = () => {
   const [category, setCategory] = useState("business");
@@ -28,14 +29,22 @@ export const GeneralLayout = () => {
 
   return (
     <div className="App">
-      <NewsContext.Provider value={{ category, country, search }}>
-        <SearchNews getSearchNews={getSearchNews} />
-        <SelectCountry getCountry={getCountry} />
-        <NewsNavigation getCategory={getCategory} />
-        <TopNews />
-        <NewsList />
-        <NewsListSearch />
-      </NewsContext.Provider>
+      <div className="wrapper">
+        <div>
+          <NewsContext.Provider value={{ category, country, search }}>
+            <SearchNews getSearchNews={getSearchNews} />
+            <SelectCountry getCountry={getCountry} />
+            <NewsNavigation getCategory={getCategory} />
+            <TopNews />
+            <NewsList />
+            <NewsListSearch />
+          </NewsContext.Provider>
+        </div>
+        <div>
+          <WeatherPage />
+          {/* <CurrencyComponent/> */}
+        </div>
+      </div>
     </div>
   );
 };
