@@ -5,6 +5,7 @@ import { GeneralLayout } from "./UI/GeneralLayout";
 import { Loader } from "./UI/Loader/Loader";
 import { router } from "./Router/router";
 
+
 function App() {
   return (
     <RouterProvider router={router} fallbackElement={<Loader />}>
