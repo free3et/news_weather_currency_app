@@ -33,7 +33,6 @@ export const Header = () => {
         <li><a href="#"><img src={google} alt="google plus" /></a></li>
         <li ><a href="#"><img src={twitter} alt="twitter" /></a></li>
       </ul></div>
-      <div className={styles.sign_in}><img src={sign} alt="sign-in" /><p>Вхід</p></div>
     </header>
   )
 }
