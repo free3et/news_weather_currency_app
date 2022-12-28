@@ -1,3 +1,5 @@
+import styles from "./News.module.scss";
+
 const countries = {
   ua: "Україна",
   us: "США",
@@ -20,12 +22,12 @@ const countries = {
 
 export const SelectCountry = ({ getCountry }) => {
   return (
-    <div>
-      <label>Choose your country</label>
+    <div className={`${styles.select_country} col-sm-12`}>
+      <label>Вибрати країну</label>
       <select name="country" id="country" onChange={(e) => getCountry(e.target.value)}>
-        {Object.keys(countries).map((item, index) => (
-          <option value={item} key={index}>
-            {item}
+        {Object.entries(countries).map((key, value) => (
+          <option value={key[0]} key={key[0]}>
+            {key[1]}
           </option>
         ))}
       </select>

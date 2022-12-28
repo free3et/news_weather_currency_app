@@ -4,20 +4,20 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const category = {
-  business: "business",
-  entertainment: "entertainment",
-  general: "general",
-  health: "health",
-  science: "science",
-  sports: "sports",
-  technology: "technology",
+  business: "Бізнес",
+  entertainment: "Розваги",
+  general: "Загальні",
+  health: "Здоров'я",
+  science: "Наука",
+  sports: "Спорт",
+  technology: "Технології",
 };
 
 export const NewsNavigation = ({ getCategory }) => {
   const [target, setTarget] = useState("");
 
   return (
-    <div onClick={(e) => setTarget(e.target)}>
+    <div onClick={(e) => setTarget(e.target)} className={`${styles.news_navigation} col-lg-12`}>
       {Object.values(category).map((item, index) => (
         <Link
           key={index}

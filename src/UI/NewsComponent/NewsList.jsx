@@ -71,14 +71,16 @@ export const NewsList = () => {
           </div>
         ) : null}
       </div>
-      <div className="items">
+      <div className="row">
         <section className={`${styles.news_list} category`}>
           {data.articles !== undefined &&
             isSuccess &&
             search === "" &&
             data.articles
               .slice(firstContentIndex, lastContentIndex)
-              .map((post, index) => <NewsComponent post={post} key={index} />)}
+              .map((post, index) => (
+                <NewsComponent post={post} key={index} className={`col-sm-12 col-md-4 col-lg-3`} />
+              ))}
         </section>
       </div>
     </>
