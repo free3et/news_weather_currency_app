@@ -5,7 +5,6 @@ import google from '../../assets/header/google_plus.png'
 import pinterest from '../../assets/header/pinterest.png'
 import skype from '../../assets/header/skype.png'
 import twitter from '../../assets/header/twitter.png'
-import sign from '../../assets/header/sign-in.png'
 import styles from './Header.module.scss'
 
 export const Header = () => {
@@ -33,7 +32,6 @@ export const Header = () => {
         <li><a href="#"><img src={google} alt="google plus" /></a></li>
         <li ><a href="#"><img src={twitter} alt="twitter" /></a></li>
       </ul></div>
-      <div className={styles.sign_in}><img src={sign} alt="sign-in" /><p>Вхід</p></div>
     </header>
   )
 }

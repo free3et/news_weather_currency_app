@@ -64,7 +64,6 @@ export const GeneralLayout = () => {
             <NewsList />
             <NewsListSearch />
           </div>
-
           <div className={`${stylesLayout.weather_currency_wrapper} col-lg-3`}>
             <WeatherPage />
             <Currency />
