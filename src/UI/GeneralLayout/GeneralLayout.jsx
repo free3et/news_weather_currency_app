@@ -11,15 +11,10 @@ import { Currency } from "../CurrencyComponent/CurrencyComponent";
 import WeatherPage from "../WeatherComponent/WeatherComponent";
 
 export const GeneralLayout = () => {
-  const [category, setCategory] = useState("business");
+  const [category, setCategory] = useState("technology");
   const [country, setCountry] = useState("ua");
   const [search, setSearchNews] = useState("");
 
-  /*   useEffect(() => {
-    const currentParams = Object.fromEntries([...searchParams]);
-    console.log(currentParams); // get new values onchange
-  }, [searchParams]);
- */
   function getCategory(item) {
     setCategory(item);
     setSearchNews("");
