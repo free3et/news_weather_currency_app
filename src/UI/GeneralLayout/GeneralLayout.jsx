@@ -10,7 +10,6 @@ import { useSearchParams } from "react-router-dom";
 import { Currency } from "../CurrencyComponent/CurrencyComponent";
 import WeatherPage from "../WeatherComponent/WeatherComponent";
 import stylesLayout from "./Layout.module.scss";
-import "../../grid.css";
 
 export const GeneralLayout = () => {
   const [category, setCategory] = useState("technology");
