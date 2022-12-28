@@ -69,10 +69,17 @@
     }
 }
 
+.top {
+    margin-top: 40px;
+}
+
 .newsCard_wrap {
+  /*   &.col-lg-6 {
+        flex: 0 0 47%;
+    } */
+
     .newsCard_thumb_img {
         position: relative;
-        z-index: 1;
         width: 100%;
 
         img {
