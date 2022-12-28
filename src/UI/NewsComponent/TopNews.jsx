@@ -14,12 +14,15 @@ export const TopNews = () => {
       {isLoading && <Loader />}
       {search === "" && (
         <>
-          <h2>Top news</h2>
-          <section className={`${styles.news_list}  top`}>
-            {data.articles !== undefined &&
-              isSuccess &&
-              data.articles.map((post, index) => <NewsComponent post={post} key={index} />)}
-          </section>
+          <div className="row">
+            <section className={`${styles.news_list} top`}>
+              {data.articles !== undefined &&
+                isSuccess &&
+                data.articles.map((post, index) => (
+                  <NewsComponent post={post} key={index} className={`col-12 col-md-6 col-lg-6`} />
+                ))}
+            </section>
+          </div>
         </>
       )}
     </>
