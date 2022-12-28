@@ -65,10 +65,6 @@ export const Header = () => {
           </li>
         </ul>
       </div>
-      <div className={styles.sign_in}>
-        <img src={sign} alt="sign-in" />
-        <p>Вхід</p>
-      </div>
     </header>
   );
 };
