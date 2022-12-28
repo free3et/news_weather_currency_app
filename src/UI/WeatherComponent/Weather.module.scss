@@ -87,3 +87,10 @@
   padding: 10px;
 }
 
+@media (max-width: 576px) {
+  .pressure,
+  .speed {
+    display: none;
+  }
+}
+

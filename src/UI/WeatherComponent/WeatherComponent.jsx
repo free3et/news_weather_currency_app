@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./Weather.module.scss";
 
-function WeatherPage() {
+export function WeatherPage() {
   const [dataWeather, setDataWeather] = useState({});
   const [dataForecast, setDataForecast] = useState({});
   const [location, setLocation] = useState("Київ");
@@ -99,10 +99,10 @@ function WeatherPage() {
                     <img src={`https://openweathermap.org/img/wn/${item.weather[0].icon}.png`} />
                     <p>{unixToDate(item.dt)}</p>
                   </div>
-                  <p>{item.main.feels_like.toFixed()}°C</p>
-                  <p>{item.main.humidity}%</p>
-                  <p>{item.wind.speed.toFixed()} м/с</p>
-                  <p>{item.main.pressure}</p>
+                  <p className={styles.temp}>{item.main.feels_like.toFixed()}°C</p>
+                  <p className={styles.humidity}>{item.main.humidity}%</p>
+                  <p className={styles.speed}>{item.wind.speed.toFixed()} м/с</p>
+                  <p className={styles.pressure}>{item.main.pressure}</p>
                 </div>
               );
             })}
@@ -112,5 +112,3 @@ function WeatherPage() {
     </div>
   );
 }
-
-export default WeatherPage;
