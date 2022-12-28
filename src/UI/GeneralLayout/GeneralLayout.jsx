@@ -7,8 +7,9 @@ import { TopNews } from "../NewsComponent/TopNews";
 import { NewsListSearch } from "../NewsComponent/NewsListSearch";
 import { Currency } from "../CurrencyComponent/CurrencyComponent";
 import WeatherPage from "../WeatherComponent/WeatherComponent";
+import { useSearchParam } from "../../context/hooks/useSearchParam";
 import stylesLayout from "./Layout.module.scss";
-// import { useSearchParam } from "../../context/hooks/useSearchParam";
+
 
 export const GeneralLayout = () => {
   const [country, category, search, getCategory, getCountry, getSearchNews] = useSearchParam();
