@@ -4,7 +4,7 @@ import style from "./Currency.module.scss";
 export const Currency = () => {
   const [currency, isLoading, errorMessage] = useCurrency();
   return (
-    <div className={`${style.currency} `}>
+    <div className={style.currency}>
       <h3 className={style.title}>Курс НБУ</h3>
       {errorMessage.error ? (
         <p className={style.error}>{errorMessage.message}</p>
