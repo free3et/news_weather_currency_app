@@ -56,18 +56,32 @@ export const GeneralLayout = () => {
 
   return (
     <div className="container">
+
       <NewsContext.Provider value={{ category, country, search }}>
         <SearchNews getSearchNews={getSearchNews} />
         <SelectCountry getCountry={getCountry} />
         <NewsNavigation getCategory={getCategory} />
-        <TopNews />
-        <NewsList />
-        <NewsListSearch />
       </NewsContext.Provider>
       <div className="row">
-        <WeatherPage />
-        <Currency />
+        <NewsContext.Provider value={{ category, country, search }}>
+          <div className="col-lg-7">
+            <TopNews />
+          </div>
+        </NewsContext.Provider>
+          <div className="col-lg-4">
+            <WeatherPage />
+          </div>
       </div>
+      <div className="row">
+        <div className="col-lg-7">
+        <NewsContext.Provider value={{ category, country, search }}>
+            <NewsList />
+            <NewsListSearch />
+        </NewsContext.Provider>
+        </div>
+        <div className="col-lg-3"><Currency/></div>
+      </div>
+
     </div>
   );
 };
