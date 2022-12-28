@@ -79,7 +79,11 @@ export const NewsList = () => {
             data.articles
               .slice(firstContentIndex, lastContentIndex)
               .map((post, index) => (
-                <NewsComponent post={post} key={index} className={`col-12 col-md-6 col-lg-4`} />
+                <NewsComponent
+                  post={post}
+                  key={index}
+                  className={`col-12 col-md-6 col-lg-6 col-xl-4`}
+                />
               ))}
         </section>
       </div>
