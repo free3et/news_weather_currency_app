@@ -74,7 +74,7 @@ export const GeneralLayout = () => {
             <NewsListSearch />
         </NewsContext.Provider>
         </div>
-        <div className="col-lg-3"><Currency/></div>
+        <div className="col-lg-4"><Currency/></div>
       </div>
 
     </div>

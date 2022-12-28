@@ -1,4 +1,4 @@
-@import '../../common.scss';
+@import "../../common.scss";
 .header {
   display: flex;
   height: 5rem;
@@ -6,7 +6,12 @@
   justify-content: space-evenly;
   background-color: $color_white;
   color: black;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
+
 .logo_portal {
   display: flex;
   align-items: flex-end;
@@ -72,23 +77,9 @@ ul li img {
   }
   .date {
     font-size: 15px;
-    display: none;
+    // display: none;
   }
   .social_network {
     display: none;
-  }
-  .search {
-    width: 10rem;
-    background-size: 1.3rem;
-    background-position: 9rem;
-  }
-  .sign_in {
-    padding: 1.5rem;
-    font-size: 15px;
-  }
-
-  .sign_in img {
-    width: 1.5rem;
-    margin-right: 1rem;
   }
 }
