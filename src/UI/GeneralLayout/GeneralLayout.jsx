@@ -9,6 +9,7 @@ import { NewsListSearch } from "../NewsComponent/NewsListSearch";
 import { useSearchParams } from "react-router-dom";
 import { Currency } from "../CurrencyComponent/CurrencyComponent";
 import WeatherPage from "../WeatherComponent/WeatherComponent";
+import stylesLayout from "./Layout.module.scss";
 
 export const GeneralLayout = () => {
   const [category, setCategory] = useState("technology");
@@ -52,17 +53,24 @@ export const GeneralLayout = () => {
   return (
     <div className="container">
       <NewsContext.Provider value={{ category, country, search }}>
-        <SearchNews getSearchNews={getSearchNews} />
-        <SelectCountry getCountry={getCountry} />
         <NewsNavigation getCategory={getCategory} />
-        <TopNews />
-        <NewsList />
-        <NewsListSearch />
+        <div className={`${stylesLayout.news_top_navigation} col-lg-12`}>
+          <SelectCountry getCountry={getCountry} />
+          <SearchNews getSearchNews={getSearchNews} />
+        </div>
+        <div className={stylesLayout.content_wrapper}>
+          <div className={`${stylesLayout.news_wrapper} col-sm-12 col-lg-9`}>
+            <TopNews />
+            <NewsList />
+            <NewsListSearch />
+          </div>
+
+          <div className={`${stylesLayout.weather_currency_wrapper} col-lg-3`}>
+            <WeatherPage />
+            <Currency />
+          </div>
+        </div>
       </NewsContext.Provider>
-      <div className="row">
-        <WeatherPage />
-        <Currency />
-      </div>
     </div>
   );
 };
