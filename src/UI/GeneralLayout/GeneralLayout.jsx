@@ -67,7 +67,7 @@ export const GeneralLayout = () => {
             )}
             {search !== "" && (
               <>
-                <h2>Результити пошуку</h2>
+                <h2>Search results</h2>
                 <NewsListSearch />
               </>
             )}
