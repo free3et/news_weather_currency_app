@@ -1,10 +1,10 @@
 import styles from "./News.module.scss";
 import UserAvatar from "../../assets/news/user_avatar.png";
 
-export const NewsComponent = ({ post }) => {
+export const NewsComponent = ({ post, className }) => {
   const { title, description, publishedAt, author, source, url, urlToImage } = post;
   return (
-    <article className={`${styles.newsCard_wrap} col-12 col-md-4 col-lg-3`}>
+    <article className={`${styles.newsCard_wrap} ${className}`}>
       <div className={styles.newsCard_thumb_img}>
         <img src={urlToImage} alt={title} />
       </div>
