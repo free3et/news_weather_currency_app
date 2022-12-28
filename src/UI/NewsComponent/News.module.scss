@@ -71,6 +71,15 @@
 
 .top {
     margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .newsCard_wrap {
@@ -119,3 +128,13 @@
         font-size: 1rem;
     }
 }
+
+/*
+
+._newsCard_wrap_1rkgi_70 {
+    margin-bottom: 20px;
+    min-height: 570px;
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+} */

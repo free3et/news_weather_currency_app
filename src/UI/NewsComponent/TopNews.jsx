@@ -19,7 +19,7 @@ export const TopNews = () => {
               {data.articles !== undefined &&
                 isSuccess &&
                 data.articles.map((post, index) => (
-                  <NewsComponent post={post} key={index} className={`col-12 col-md-6 col-lg-6`} />
+                  <NewsComponent post={post} key={index} className={`col-12 col-md-4 col-lg-5`} />
                 ))}
             </section>
           </div>
