@@ -7,8 +7,8 @@ import { TopNews } from "../NewsComponent/TopNews";
 import { NewsListSearch } from "../NewsComponent/NewsListSearch";
 import { Currency } from "../CurrencyComponent/CurrencyComponent";
 import WeatherPage from "../WeatherComponent/WeatherComponent";
+import { useSearchParam } from "../../context/hooks/useSearchParam";
 import stylesLayout from "./Layout.module.scss";
-
 
 export const GeneralLayout = () => {
   const [country, category, search, getCategory, getCountry, getSearchNews] = useSearchParam();
@@ -26,7 +26,7 @@ export const GeneralLayout = () => {
         </div>
         <div className="row">
           <div className={stylesLayout.content_wrapper}>
-            <div className={`${stylesLayout.news_wrapper} col-sm-12 col-lg-8`}>
+            <div className={`${stylesLayout.news_wrapper} col-sm-12 col-lg-9`}>
               {search === "" && (
                 <>
                   <h2>Top news</h2>
