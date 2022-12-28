@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     padding: 0.5em 1.5em;
-    border: 1px solid rgba(155, 154, 151, 0.4);
+    border-left: 1px solid rgba(155, 154, 151, 0.4);
     background: $color_grey;
 }
 
@@ -48,6 +48,10 @@
         font-weight: 700;
         font-size: 0.8em;
         transition: all 0.3s ease;
+
+        &:last-child{
+            border-right: none;
+        }
 
         &:hover {
             border-right: 1px solid $color_white;
@@ -104,7 +108,7 @@
         background: unset;
 
         h3 {
-            color: #000000;
+            color: $color_black;
             font-weight: 700;
             font-size: 1.1em;
             line-height: 1.2;
@@ -131,13 +135,3 @@
         text-align: justify;
     }
 }
-
-/*
-
-._newsCard_wrap_1rkgi_70 {
-    margin-bottom: 20px;
-    min-height: 570px;
-    padding: 15px;
-    text-align: center;
-    width: 300px;
-} */
