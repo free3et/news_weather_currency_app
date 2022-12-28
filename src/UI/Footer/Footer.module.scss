@@ -1,11 +1,12 @@
 @import '../../common.scss';
 
 .footer {
-  background-color: dimgray;
+  background-color: $color_grey;
   margin-top: 30px;  
 
   &__container {
     display: flex;
+    padding-bottom: 10px;
   }
 
   &__contact {
@@ -19,7 +20,7 @@
     p {
       text-align: center;
     }
-    img {
+    iframe {
       width: 500px;
       height: 170px;
       object-fit: cover;
@@ -27,7 +28,13 @@
   }
 
   &__bottom {
-    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: $color_dark_grey;
+
+    p {
+      color: $color_white;
+    }
   }
 
   p {
@@ -36,7 +43,58 @@
   }
   
   a {
-    color: #303583;
+    color: $color_white;
+  }
+}
+@media (max-width: 1050px) {
+  .footer {
+    &__contact {
+      width: 270px;
+    }
+  }
+}
+
+@media (max-width: 864px) {
+  .footer {
+    &__location {
+        
+      iframe {
+        width: 360px;
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .footer {
+    margin-top: 15px;
+
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__contact {
+      margin-top: 20px;
+    }
+
+    &__location {
+      margin-right: 40px;
+
+      p {
+        font-size: 14px;
+      }
+
+      iframe {
+        width: 330px;
+      }
+    }
+
+    &__bottom {
+      p{
+        font-size: 13px;
+      }
+    }
   }
 }
 
