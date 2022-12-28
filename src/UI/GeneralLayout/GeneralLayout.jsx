@@ -8,7 +8,6 @@ import { NewsListSearch } from "../NewsComponent/NewsListSearch";
 import { Currency } from "../CurrencyComponent/CurrencyComponent";
 import WeatherPage from "../WeatherComponent/WeatherComponent";
 import stylesLayout from "./Layout.module.scss";
-import "../../grid.css";
 import { useSearchParam } from "../../context/hooks/useSearchParam";
 
 export const GeneralLayout = () => {
