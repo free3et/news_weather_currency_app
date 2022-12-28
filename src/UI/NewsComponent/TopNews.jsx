@@ -15,7 +15,7 @@ export const TopNews = () => {
       {search === "" && (
         <>
           <div className="row">
-            <section className={`${styles.news_list} top`}>
+            <section className={`${styles.top} `}>
               {data.articles !== undefined &&
                 isSuccess &&
                 data.articles.map((post, index) => (
