@@ -5,7 +5,6 @@ import google from "../../assets/header/google_plus.png";
 import pinterest from "../../assets/header/pinterest.png";
 import skype from "../../assets/header/skype.png";
 import twitter from "../../assets/header/twitter.png";
-import sign from "../../assets/header/sign-in.png";
 import styles from "./Header.module.scss";
 
 export const Header = () => {
