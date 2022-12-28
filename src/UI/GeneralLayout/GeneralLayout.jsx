@@ -10,6 +10,7 @@ import { useSearchParams } from "react-router-dom";
 import { Currency } from "../CurrencyComponent/CurrencyComponent";
 import WeatherPage from "../WeatherComponent/WeatherComponent";
 import stylesLayout from "./Layout.module.scss";
+import "../../grid.css";
 
 export const GeneralLayout = () => {
   const [category, setCategory] = useState("technology");
@@ -53,20 +54,43 @@ export const GeneralLayout = () => {
   return (
     <div className="container">
       <NewsContext.Provider value={{ category, country, search }}>
-        <NewsNavigation getCategory={getCategory} />
-        <div className={`${stylesLayout.news_top_navigation} col-lg-12`}>
-          <SelectCountry getCountry={getCountry} />
-          <SearchNews getSearchNews={getSearchNews} />
+        <div className="row">
+          <NewsNavigation getCategory={getCategory} />
         </div>
-        <div className={stylesLayout.content_wrapper}>
-          <div className={`${stylesLayout.news_wrapper} col-sm-12 col-lg-9`}>
-            <TopNews />
-            <NewsList />
-            <NewsListSearch />
+        <div className="row">
+          <div className={`${stylesLayout.news_top_navigation} col-lg-12`}>
+            <SelectCountry getCountry={getCountry} />
+            <SearchNews getSearchNews={getSearchNews} />
           </div>
-          <div className={`${stylesLayout.weather_currency_wrapper} col-lg-3`}>
-            <WeatherPage />
-            <Currency />
+        </div>
+        <div className="row">
+          <div className={stylesLayout.content_wrapper}>
+            <div className={`${stylesLayout.news_wrapper} col-sm-12 col-lg-9`}>
+              {search === "" && (
+                <>
+                  <h2>Top news</h2>
+                  <TopNews />
+                </>
+              )}
+
+              {search === "" && (
+                <>
+                  <h2>{category}</h2>
+                  <NewsList />
+                </>
+              )}
+              {search !== "" && (
+                <>
+                  <h2>Результити пошуку</h2>
+                  <NewsListSearch />
+                </>
+              )}
+            </div>
+
+            <div className={`${stylesLayout.weather_currency_wrapper} col-lg-3`}>
+              <WeatherPage />
+              <Currency />
+            </div>
           </div>
         </div>
       </NewsContext.Provider>
