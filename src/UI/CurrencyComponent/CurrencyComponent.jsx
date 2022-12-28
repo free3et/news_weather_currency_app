@@ -4,7 +4,6 @@ import style from "./Currency.module.scss";
 export const Currency = () => {
   const [currency, isLoading, errorMessage] = useCurrency();
   return (
-
     <div className={style.currency}>
       <h3 className={style.title}>Курс НБУ</h3>
       <div className={style.main_unit}>
@@ -17,6 +16,5 @@ export const Currency = () => {
         ) : null}
       </div>
     </div>
-
   );
 };

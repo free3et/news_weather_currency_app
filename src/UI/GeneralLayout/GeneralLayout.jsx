@@ -59,13 +59,12 @@ export const GeneralLayout = () => {
           <SearchNews getSearchNews={getSearchNews} />
         </div>
         <div className={stylesLayout.content_wrapper}>
-          <div className={`${stylesLayout.news_wrapper} col-sm-12 col-lg-9`}>
+          <div className={`${stylesLayout.news_wrapper} col-sm-12 col-lg-8`}>
             <TopNews />
             <NewsList />
             <NewsListSearch />
           </div>
-
-          <div className={`${stylesLayout.weather_currency_wrapper} col-lg-3`}>
+          <div className={`${stylesLayout.weather_currency_wrapper} col-sm-12 col-lg-3`}>
             <WeatherPage />
             <Currency />
           </div>

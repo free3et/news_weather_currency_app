@@ -3,6 +3,8 @@
   background-color: #efeded;
   color: black;
   padding: 0;
+  width: 300px;
+  margin-top: 2rem;
 }
 .title {
   background-color: $color_main;
@@ -72,9 +74,9 @@ p {
     transform: rotate(360deg);
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 991px) {
   .currency {
-    width: 250px;
+    margin: 0;
   }
   .input {
     width: 2.5rem;

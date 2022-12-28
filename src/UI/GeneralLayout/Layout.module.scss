@@ -1,16 +1,23 @@
 .content_wrapper {
-    display: flex;
+  display: flex;
 }
 
 .news_top_navigation {
-    display: flex;
-    height: 40px;
-    padding: 0;
+  display: flex;
+  height: 40px;
+  padding: 0;
+  overflow: hidden;
 }
-
+.weather_currency_wrapper{
+  margin-top: 40px;
+}
 @media (max-width: 991px) {
-    .content_wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-    }
+  .content_wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .weather_currency_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }

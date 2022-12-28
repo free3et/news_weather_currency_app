@@ -1,4 +1,4 @@
-@import '../../common.scss';
+@import "../../common.scss";
 .header {
   display: flex;
   height: 5rem;
@@ -9,6 +9,7 @@
   position: sticky;
   top: 0;
   z-index: 3;
+  width: 100vw;
 }
 .logo_portal {
   display: flex;
@@ -49,9 +50,9 @@ ul li img {
   display: block;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 991px) {
   .header {
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .logo_portal {
     font-size: 15px;
@@ -61,10 +62,8 @@ ul li img {
   }
   .date {
     font-size: 15px;
-    display: none;
   }
   .social_network {
     display: none;
   }
-
 }
