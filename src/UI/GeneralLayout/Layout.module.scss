@@ -1,0 +1,16 @@
+.content_wrapper {
+    display: flex;
+}
+
+.news_top_navigation {
+    display: flex;
+    height: 40px;
+    padding: 0;
+}
+
+@media (max-width: 991px) {
+    .content_wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
