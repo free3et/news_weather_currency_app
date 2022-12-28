@@ -15,6 +15,10 @@ export const Currency = () => {
           currency.map((element, i) => <RowCurrency element={element} key={i} />)
         ) : null}
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 02a90690bd13b666b08c7431e3ca40022a57b6a6
     </div>
   );
 };
