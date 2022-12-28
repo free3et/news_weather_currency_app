@@ -122,30 +122,3 @@
         text-align: justify;
     }
 }
-
-@media (max-width: 768px) {
-/*     .news_navigation {
-        flex-direction: column;
-    } */
-
-    .search_field {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .select_country {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .newsCard_thumb_img {
-
-        img {
-
-        }
-    }
-}
-
-.newsCard_wrap .col-lg-6{
-    flex: 0 0 47%;
-}
