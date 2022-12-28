@@ -49,20 +49,6 @@ ul li img {
   display: block;
 }
 
-.sign_in {
-  border-left: 2px solid black;
-  display: flex;
-  padding: 0.5rem;
-  align-items: center;
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.sign_in img {
-  width: 2rem;
-  margin-right: 1rem;
-}
-
 @media (max-width: 576px) {
   .header {
     justify-content: space-between;
@@ -84,14 +70,5 @@ ul li img {
     width: 10rem;
     background-size: 1.3rem;
     background-position: 9rem;
-  }
-  .sign_in {
-    padding: 1.5rem;
-    font-size: 15px;
-  }
-
-  .sign_in img {
-    width: 1.5rem;
-    margin-right: 1rem;
   }
 }
