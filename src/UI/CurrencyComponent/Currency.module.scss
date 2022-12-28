@@ -1,8 +1,9 @@
-@import '../../common.scss';
+@import "../../common.scss";
 .currency {
   background-color: #efeded;
   color: black;
   padding: 0;
+  margin-top: 2rem;
 }
 .title {
   background-color: $color_main;
@@ -12,7 +13,7 @@
   font-size: 18px;
   text-align: center;
 }
-.main_unit{
+.main_unit {
   padding: 0.2rem;
   box-sizing: border-box;
 }
@@ -56,7 +57,7 @@ p {
   width: 48px;
   height: 48px;
   border: 5px solid;
-  border-color: #F46E66 transparent;
+  border-color: #f46e66 transparent;
   border-radius: 50%;
   display: block;
   box-sizing: border-box;
@@ -72,9 +73,9 @@ p {
     transform: rotate(360deg);
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 991px) {
   .currency {
-    width: 250px;
+    margin: 0;
   }
   .input {
     width: 2.5rem;
