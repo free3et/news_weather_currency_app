@@ -22,7 +22,7 @@
     width: 2em;
     height: 2em;
     margin: 5px 3px;
-    border: solid 0.15em #4aa5be;
+    border: solid 0.15em #99c0e9;
     border-radius: 0.7em;
     background-color: transparent;
     color: #000000;
@@ -33,7 +33,7 @@
 
 .page.active,
 .page:hover {
-    background-color: #4aa5be;
+    background-color: #99c0e9;
 }
 
 .page.disabled {

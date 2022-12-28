@@ -11,20 +11,20 @@ export const NewsComponent = ({ post, className }) => {
       <div className={styles.newsCard_body}>
         <h3>{title}</h3>
         <p className={styles.description}>{description}</p>
-        <div className={styles.userInfo}>
-          <div className={styles.userName_info}>
+        <div className={styles.userInfo_wrapper}>
+          <div className={`${styles.userName_info} col-12 col-md-6 col-lg-6`}>
             <img src={UserAvatar} alt={title} />
             <p>{author || "no author"}</p>
           </div>
-          <div className={styles.userDate_info}>
-            <img src={UserAvatar} alt={title} />
-            <p>{publishedAt}</p>
-          </div>
-          <div className={styles.sourceNews_info}>
+          <div className={`${styles.sourceNews_info} col-12 col-md-6 col-lg-6`}>
             <img src={UserAvatar} alt={title} />
             <p>{source.name}</p>
             <a href={url}>Link</a>
           </div>
+        </div>
+        <div className={styles.userDate_info}>
+          <img src={UserAvatar} alt={title} />
+          <p>{publishedAt}</p>
         </div>
       </div>
     </article>
