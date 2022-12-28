@@ -7,18 +7,17 @@ function WeatherPage() {
   const [dataForecast, setDataForecast] = useState({});
   const [location, setLocation] = useState("Київ");
 
-  //
-  console.log(dataWeather);
-  console.log(dataForecast);
-  //
-
   const weatherList = dataForecast.list ? dataForecast.list : [];
 
   const hour_quantity = 8;
 
   const Base_url = `https://api.openweathermap.org/data/2.5/`;
-  const url_weather = `${Base_url}/weather?q=${location}&lang=ua&units=metric&appid=927d09bc49dbee6aac7f5cb1df707542`;
-  const url_forecast = `${Base_url}/forecast?q=${location}&units=metric&cnt=${hour_quantity}&appid=927d09bc49dbee6aac7f5cb1df707542`;
+  const url_weather = `${Base_url}/weather?q=${location}&lang=ua&units=metric&appid=${
+    import.meta.env.VITE_API_KEY_WEATHER
+  }`;
+  const url_forecast = `${Base_url}/forecast?q=${location}&units=metric&cnt=${hour_quantity}&appid=${
+    import.meta.env.VITE_API_KEY_WEATHER
+  }`;
 
   const unixToDate = (unixDate) => {
     return new Date(unixDate * 1000).toISOString().split("T")[1].slice(0, 5);
@@ -42,7 +41,7 @@ function WeatherPage() {
   useEffect(searchLocation, []);
 
   return (
-    <main className={styles.weather}>
+    <div className={styles.weather}>
       <div className={styles.weather__search}>
         <input
           className={styles.weather__input}
@@ -94,8 +93,6 @@ function WeatherPage() {
         <div className={styles.location__wrapper}>
           <div className={styles.location}>
             {weatherList.map((item, index) => {
-              console.log(item);
-
               return (
                 <div key={index} className={styles.location__bottom}>
                   <div className={styles.location__bottom_date}>
@@ -112,7 +109,7 @@ function WeatherPage() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
 
