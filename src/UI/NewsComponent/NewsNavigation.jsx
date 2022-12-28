@@ -17,7 +17,7 @@ export const NewsNavigation = ({ getCategory }) => {
   const [target, setTarget] = useState("");
 
   return (
-    <div onClick={(e) => setTarget(e.target)}>
+    <div onClick={(e) => setTarget(e.target)} className={`${styles.news_navigation} col-lg-12`}>
       {Object.values(category).map((item, index) => (
         <Link
           key={index}
