@@ -4,8 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    max-width: 640px;
     height: 40px;
     background: $color_grey;
     color: $color_white;
@@ -26,8 +24,6 @@
     position: relative;
     display: flex;
     align-items: center;
-    width: 100%;
-    max-width: 589px;
     padding: 0.5em 1.5em;
     border: 1px solid rgba(155, 154, 151, 0.4);
     background: $color_grey;
@@ -105,10 +101,10 @@
             line-height: 1.2;
             background: $color_light_grey;
             padding: 1em;
-            margin: 0;
+            margin: -7px 0 15px;
         }
 
-        .userDate_info {
+        .userName_info {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
@@ -148,4 +144,8 @@
 
         }
     }
+}
+
+.newsCard_wrap .col-lg-6{
+    flex: 0 0 47%;
 }

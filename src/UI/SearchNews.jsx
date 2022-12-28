@@ -4,7 +4,7 @@ import styles from "./NewsComponent/News.module.scss";
 export const SearchNews = ({ getSearchNews }) => {
   const [value, setValue] = useState("");
   return (
-    <div className={`${styles.search_field} col-sm-12 col-md-5 col-lg-6`}>
+    <div className={`${styles.search_field} col-sm-12 col-md-6 col-lg-6`}>
       <input
         type="text"
         id="search-input"
