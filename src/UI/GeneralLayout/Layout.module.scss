@@ -26,14 +26,14 @@
 }
 
 @media (max-width: 991px) {
-  .content_wrapper {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .news_wrapper,
-  .weather_currency_wrapper {
-    margin-top: 20px;
-  }
+    .content_wrapper {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    .news_wrapper, .weather_currency_wrapper{
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 768px) {
