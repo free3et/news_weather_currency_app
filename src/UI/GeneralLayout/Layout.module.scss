@@ -28,7 +28,7 @@
 @media (max-width: 991px) {
     .content_wrapper {
         display: flex;
-        flex-direction: column-reverse;
+        flex-wrap: wrap-reverse;
     }
 
     .news_wrapper, .weather_currency_wrapper{
