@@ -1,6 +1,7 @@
 import { NewsComponent } from "./NewsComponent";
 import styles from "./News.module.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const category = {
   business: "business",
@@ -13,12 +14,18 @@ const category = {
 };
 
 export const NewsNavigation = ({ getCategory }) => {
+  const [target, setTarget] = useState("");
+
   return (
-    <div>
+    <div onClick={(e) => setTarget(e.target)} className={`${styles.news_navigation} col-lg-12`}>
       {Object.values(category).map((item, index) => (
-        <button key={index} onClick={() => getCategory(item)}>
+        <Link
+          key={index}
+          onClick={() => getCategory(item)}
+          className={target.innerText === item ? "active" : ""}
+        >
           {item}
-        </button>
+        </Link>
       ))}
     </div>
   );

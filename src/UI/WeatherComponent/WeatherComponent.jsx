@@ -58,9 +58,7 @@ function WeatherPage() {
         <div>
           <div className={styles.location__top}>
             <div className={styles.location__header}>
-              <p className={styles.location__header_title}>
-                {dataWeather.name}
-              </p>
+              <p className={styles.location__header_title}>{dataWeather.name}</p>
             </div>
             <>
               <img
@@ -71,29 +69,21 @@ function WeatherPage() {
               />
             </>
             <div className={styles.location__top_temp}>
-              {dataWeather.main ? (
-                <p>{dataWeather.main.temp.toFixed()}°C</p>
-              ) : null}
+              {dataWeather.main ? <p>{dataWeather.main.temp.toFixed()}°C</p> : null}
             </div>
           </div>
           <div className={styles.location__bot}>
             <div className={styles.location__bot_desc}>
-              {dataWeather.main ? (
-                <p>{dataWeather.weather[0].description}</p>
-              ) : null}
+              {dataWeather.main ? <p>{dataWeather.weather[0].description}</p> : null}
             </div>
             <div className={styles.location__bot_feels}>
-              {dataWeather.main ? (
-                <p>{dataWeather.main.feels_like.toFixed()}°C</p>
-              ) : null}
+              {dataWeather.main ? <p>{dataWeather.main.feels_like.toFixed()}°C</p> : null}
             </div>
             <div className={styles.location__bot_humidity}>
               {dataWeather.main ? <p>{dataWeather.main.humidity} %</p> : null}
             </div>
             <div className={styles.location__bot_speed}>
-              {dataWeather.wind ? (
-                <p>{dataWeather.wind.speed.toFixed()} м/с</p>
-              ) : null}
+              {dataWeather.wind ? <p>{dataWeather.wind.speed.toFixed()} м/с</p> : null}
             </div>
             <div className={styles.location__bot_pressure}>
               {dataWeather.main ? <p>{dataWeather.main.pressure}</p> : null}
@@ -109,9 +99,7 @@ function WeatherPage() {
               return (
                 <div key={index} className={styles.location__bottom}>
                   <div className={styles.location__bottom_date}>
-                    <img
-                      src={`https://openweathermap.org/img/wn/${item.weather[0].icon}.png`}
-                    />
+                    <img src={`https://openweathermap.org/img/wn/${item.weather[0].icon}.png`} />
                     <p>{unixToDate(item.dt)}</p>
                   </div>
                   <p>{item.main.feels_like.toFixed()}°C</p>

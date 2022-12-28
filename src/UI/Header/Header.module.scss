@@ -1,0 +1,70 @@
+@import '../../common.scss';
+.header {
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: $color_white;
+  color: black;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+.logo_portal {
+  display: flex;
+  align-items: flex-end;
+  font-size: 20px;
+  font-weight: 700;
+}
+.logo {
+  display: flex;
+  list-style: none;
+  margin: 0 0.5rem 0 0;
+}
+
+.logo_letter {
+  background-color: $color_grey;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+.date {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 1rem 0 0 1rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+ul li img {
+  width: 3rem;
+  margin-top: 1rem;
+}
+
+.social_network {
+  display: block;
+}
+
+@media (max-width: 576px) {
+  .header {
+    justify-content: space-between;
+  }
+  .logo_portal {
+    font-size: 15px;
+  }
+  .logo_letter {
+    font-size: 20px;
+  }
+  .date {
+    font-size: 15px;
+    display: none;
+  }
+  .social_network {
+    display: none;
+  }
+
+}

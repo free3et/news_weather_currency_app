@@ -15,7 +15,7 @@ export const TopNews = () => {
       {search === "" && (
         <>
           <h2>Top news</h2>
-          <section className={`${styles.news_list} col-lg-6 top`}>
+          <section className={`${styles.news_list}  top`}>
             {data.articles !== undefined &&
               isSuccess &&
               data.articles.map((post, index) => <NewsComponent post={post} key={index} />)}
