@@ -23,14 +23,15 @@ const countries = {
 export const SelectCountry = ({ getCountry }) => {
   return (
     <div className={`${styles.select_country} col-12 col-md-12 col-lg-6`}>
-      <label>Вибрати країну</label>
-      <select name="country" id="country" onChange={(e) => getCountry(e.target.value)}>
-        {Object.entries(countries).map((key, value) => (
-          <option value={key[0]} key={key[0]}>
-            {key[1]}
-          </option>
-        ))}
-      </select>
+      <div className={styles.select_wrapper}>
+        <select name="country" id="country" onChange={(e) => getCountry(e.target.value)}>
+          {Object.entries(countries).map((key, value) => (
+            <option value={key[0]} key={key[0]}>
+              {key[1]}
+            </option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 };

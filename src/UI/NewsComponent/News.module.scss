@@ -18,6 +18,35 @@
         background-color: initial;
         color: $color_white;
     }
+
+    .select_wrapper {
+        position: relative;
+        width: 300px;
+        height: 26px;
+        border: 1px solid #bcbcbc;
+        border-radius: 0;
+        background: $color_white;
+        color: $color_dark_grey;
+        padding: 2px 4px;
+
+        > select {
+            z-index: 1;
+            width: 100%;
+            height: auto;
+            border: 0;
+            background: $color_white;
+            appearance: none;
+
+            &:focus-visible {
+                outline: $color_blue auto 1px;
+                padding: 0px 10px;
+            }
+        }
+
+        > select::-ms-expand {
+            display: none;
+        }
+    }
 }
 
 .search_field {
@@ -174,8 +203,10 @@
 
             .sourceNews_info {
                 display: flex;
+                padding-left: 10px;
 
                 a {
+                    color: $color_grey_news_info;
                     font-weight: 500;
                     font-size: 0.8em;
                     line-height: 1.5;
@@ -209,8 +240,8 @@
     }
 
     .select_country {
-        font-size: 0.6em;
         border-bottom: 1px solid $color_white;
+        font-size: 0.6em;
     }
 
     .search_field {
