@@ -6,7 +6,7 @@ import { SearchNews } from "../SearchNews";
 import { TopNews } from "../NewsComponent/TopNews";
 import { NewsListSearch } from "../NewsComponent/NewsListSearch";
 import { Currency } from "../CurrencyComponent/CurrencyComponent";
-import WeatherPage from "../WeatherComponent/WeatherComponent";
+import { WeatherPage } from "../WeatherComponent/WeatherComponent";
 import { useSearchParam } from "../../context/hooks/useSearchParam";
 import stylesLayout from "./Layout.module.scss";
 
@@ -42,7 +42,7 @@ export const GeneralLayout = () => {
               )}
               {search !== "" && (
                 <>
-                  <h2>Search results</h2>
+                  <h2>Search results "{search}"</h2>
                   <NewsListSearch />
                 </>
               )}

@@ -67,7 +67,7 @@ export const NewsListSearch = () => {
         ) : null}
       </div>
       <div className="row">
-        <section className={`${styles.news_list} search`}>
+        <section className={styles.search}>
           {data.articles !== undefined &&
             isSuccess &&
             data.articles

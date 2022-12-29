@@ -16,7 +16,6 @@ export const SearchNews = ({ getSearchNews }) => {
           setValue("");
         }}
       />
-      <label htmlFor="search-input">Пошук по сайту</label>
     </div>
   );
 };

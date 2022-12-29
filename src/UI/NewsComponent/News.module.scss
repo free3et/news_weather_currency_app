@@ -23,10 +23,47 @@
 .search_field {
     position: relative;
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
     padding: 0.5em 1.5em;
     border-left: 1px solid rgba(155, 154, 151, 0.4);
     background: $color_grey;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        height: 100%;
+        padding: 0 16px;
+        background-image: url('../../assets/news/search.png');
+        background-repeat: no-repeat;
+        pointer-events: none;
+    }
+
+    input {
+        display: block;
+        box-sizing: content-box;
+        width: 29.5ch;
+        height: auto;
+        margin: 0;
+        padding: 8px 8px 8px calc(1em + 32px);
+        padding-left: 15px;
+        border: 0;
+        background: $color_white;
+        color: $color_black;
+        letter-spacing: inherit;
+        font: inherit;
+        transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        animation-name: mui-auto-fill-cancel;
+        animation-duration: 10ms;
+
+        &:focus {
+            width: 35ch;
+        }
+
+        &:focus-visible {
+            outline: $color_blue auto 1px;
+        }
+    }
 }
 
 .news_navigation {
@@ -62,7 +99,8 @@
 }
 
 .top,
-.category {
+.category,
+.search {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -127,10 +165,10 @@
                 color: $color_grey_news_info;
 
                 p {
+                    text-align: left;
+                    word-break: break-all;
                     font-size: 0.8em;
                     line-height: 1.5;
-                    word-break: break-all;
-                    text-align: left;
                 }
             }
 
@@ -172,10 +210,20 @@
 
     .select_country {
         font-size: 0.6em;
+        border-bottom: 1px solid $color_white;
     }
 
     .search_field {
         justify-content: center;
+
+        &:after {
+            right: 28%;
+        }
+
+        input {
+            height: 15px;
+            padding: 4px 4px 4px calc(1em + 25px);
+        }
     }
 }
 
