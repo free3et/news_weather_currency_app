@@ -85,7 +85,12 @@ p {
     width: 2rem;
   }
   .row {
-    margin: 0.5rem;
+    margin: 1rem;
     padding: 0.2rem;
+  }
+}
+@media (max-width: 767px) {
+  .currency {
+    margin-top: 2rem;
   }
 }

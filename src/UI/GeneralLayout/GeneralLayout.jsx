@@ -48,7 +48,9 @@ export const GeneralLayout = () => {
               )}
             </div>
 
-            <div className={`${stylesLayout.weather_currency_wrapper} col-lg-3`}>
+            <div
+              className={`${stylesLayout.weather_currency_wrapper} col-md-12 col-sm-12 col-lg-3 col-12`}
+            >
               <WeatherPage />
               <Currency />
             </div>

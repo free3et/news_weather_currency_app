@@ -41,7 +41,7 @@ export function WeatherPage() {
   useEffect(searchLocation, []);
 
   return (
-    <div className={styles.weather}>
+    <div className={`${styles.weather} col-sm-7 col-lg-12 col-md-6 col-10 mx-auto`}>
       <div className={styles.weather__search}>
         <input
           className={styles.weather__input}
