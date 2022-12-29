@@ -6,7 +6,7 @@ import { SearchNews } from "../SearchNews";
 import { TopNews } from "../NewsComponent/TopNews";
 import { NewsListSearch } from "../NewsComponent/NewsListSearch";
 import { Currency } from "../CurrencyComponent/CurrencyComponent";
-import WeatherPage from "../WeatherComponent/WeatherComponent";
+import {WeatherPage }from "../WeatherComponent/WeatherComponent";
 import { useSearchParam } from "../../context/hooks/useSearchParam";
 import stylesLayout from "./Layout.module.scss";
 
@@ -48,7 +48,7 @@ export const GeneralLayout = () => {
               )}
             </div>
 
-            <div className={`${stylesLayout.weather_currency_wrapper} col-lg-3`}>
+            <div className={`${stylesLayout.weather_currency_wrapper} col-md-12 col-sm-12 col-lg-3`}>
               <WeatherPage />
               <Currency />
             </div>
