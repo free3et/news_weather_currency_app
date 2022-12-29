@@ -89,3 +89,8 @@ p {
     padding: 0.2rem;
   }
 }
+@media (max-width: 767px) {
+  .currency {
+    margin-top: 2rem;
+  }
+}
